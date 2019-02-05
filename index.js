@@ -17,6 +17,9 @@ function isPrimitive(test) {
 function fromJSON(pb, value) {
   var ctors = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
+  if (typeof pb === 'function') {
+    pb = new pb();
+  }
   if ((0, _lodashEs.isPlainObject)(value)) {
     Object.keys(value).forEach(function (k) {
       var setter = 'set' + (k.charAt(0).toUpperCase() + k.slice(1));

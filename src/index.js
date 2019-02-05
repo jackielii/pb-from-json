@@ -9,6 +9,9 @@ function isPrimitive (test) {
 }
 
 export default function fromJSON (pb, value, ctors = {}) {
+  if (typeof pb === 'function') {
+      pb = new pb()
+  }
   if (isPlainObject(value)) {
     Object.keys(value).forEach(k => {
       let setter = `set${k.charAt(0).toUpperCase() + k.slice(1)}`
