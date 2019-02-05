@@ -1,0 +1,29 @@
+{
+  "name": "pb-from-json",
+  "version": "1.0.0",
+  "description": "create pb objects from json",
+  "main": "index.js",
+  "repository": "git@github.com:jackielii/pb-from-json.git",
+  "homepage": "https://github.com/jackielii/pb-from-json",
+  "author": "Jackie Li <jackie.li@fuseim.com>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "protobuf",
+    "fromJSON"
+  ],
+  "scripts": {
+    "build": "babel --presets env src -d ./ --ignore src/index.test.js",
+    "dev": "babel --presets env src -d ./ --watch --ignore src/index.test.js",
+    "test": "jest --watch"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.11"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "jest": "^20.0.3"
+  }
+}
