@@ -1,6 +1,6 @@
 {
   "name": "pb-from-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "create pb objects from json",
   "main": "index.js",
   "repository": "git@github.com:jackielii/pb-from-json.git",
