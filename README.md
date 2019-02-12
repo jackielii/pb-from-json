@@ -13,6 +13,8 @@ Once the above issues are resolved, this package doesn't need to exist
 example:
 
 ```
+    import fromJSON from 'pb-from-json'
+    
     const resp = await grpcCall(fromJSON(object))
     return resp.toObject()
 ```
