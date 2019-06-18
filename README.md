@@ -9,7 +9,28 @@ Once the above issues are resolved, this package doesn't need to exist
 example:
 
 ```
-    const resp = await grpcCall(fromJSON(object))
-    return resp.toObject()
+
+import { PingRequest } from 'my-service-pb'
+
+const obj = {
+    a: 'a',
+    b: 'b'
+}
+
+const pbObj = pbFromJson(PingRequest, obj)
 ```
 
+nested example:
+
+```
+
+import {PingRequest, PingSubRequest} from 'my-service-pb'
+
+const obj = {
+    a: 'a',
+    b: {
+        c: 'c'
+    }
+}
+const pbObj = pbFromJson(PingRequest, obj, {'b.ctors':PingSubRequest})
+```
